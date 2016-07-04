@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ddd.Events", "Ddd.Events\Ddd.Events.csproj", "{C4BBAB9B-B7E5-4DA8-935A-DB0E341769B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ddd.Events.Example", "Ddd.Events.Example\Ddd.Events.Example.csproj", "{E7E774B0-5C51-464C-8363-041333995C3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ddd.Events.Tets", "Ddd.Events.Tets\Ddd.Events.Tets.csproj", "{7C9C7A0F-64F7-4844-ADE1-2346D53E03DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C4BBAB9B-B7E5-4DA8-935A-DB0E341769B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4BBAB9B-B7E5-4DA8-935A-DB0E341769B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4BBAB9B-B7E5-4DA8-935A-DB0E341769B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4BBAB9B-B7E5-4DA8-935A-DB0E341769B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7E774B0-5C51-464C-8363-041333995C3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7E774B0-5C51-464C-8363-041333995C3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7E774B0-5C51-464C-8363-041333995C3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7E774B0-5C51-464C-8363-041333995C3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C9C7A0F-64F7-4844-ADE1-2346D53E03DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C9C7A0F-64F7-4844-ADE1-2346D53E03DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C9C7A0F-64F7-4844-ADE1-2346D53E03DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C9C7A0F-64F7-4844-ADE1-2346D53E03DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
