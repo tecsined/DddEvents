@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using Ddd.Events.Example;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace Ddd.Events.Tets
 {
@@ -23,17 +24,25 @@ namespace Ddd.Events.Tets
 
                 // Create fake listener. This is going to be direct related to the event process.
                 var listener = new EventListener();
-            
+
             //Act
 
-                //The process of the Event is complete and the 
-                //listener recieved the domain on the specific event  
+                bebe.GoToSleep(DateTime.Now);
+                mama.GoToSleep(DateTime.Now.AddMinutes(20));
+                bebe.Wakeup(DateTime.Now.AddHours(2));
+                mama.Wakeup(DateTime.Now.AddHours(2));
+
+            //The process of the Event is complete and the 
+            //listener recieved the domain on the specific event  
                 listener.OnSleepStart(bebe);
-                listener.OnSleepStart(mama); 
+                listener.OnSleepStart(mama);
+                listener.OnWakeUpStart(bebe);
+                listener.OnWakeUpStart(mama);
 
             //Assert 
-               //Events where processed. 
-               Assert.IsFalse(bebe.DomainEvents.Any());
+
+            //Events where processed. 
+            Assert.IsFalse(bebe.DomainEvents.Any());
                Assert.IsFalse(mama.DomainEvents.Any());
         }
     }

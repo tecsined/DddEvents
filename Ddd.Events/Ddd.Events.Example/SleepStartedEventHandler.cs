@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Diagnostics;
 
 namespace Ddd.Events.Example
 {
@@ -10,7 +10,7 @@ namespace Ddd.Events.Example
             var sleepTime = domainEvent.SleepTime;
 
             //Test
-            Console.WriteLine($"Name: {name}. Sleep began at: {sleepTime}");
+            Debug.WriteLine($"Name: {name}. Sleep began at: {sleepTime}");
         }
     }
 }

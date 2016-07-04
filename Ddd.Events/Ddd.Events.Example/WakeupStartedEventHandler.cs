@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Diagnostics;
 
 namespace Ddd.Events.Example
 {
@@ -10,7 +10,7 @@ namespace Ddd.Events.Example
             var wakeupTime = domainEvent.WakeupTime;
 
             //Test
-            Console.WriteLine($@"Name: {name}. Waked up at: {wakeupTime}");
+            Debug.WriteLine($@"Name: {name}. Waked up at: {wakeupTime}");
         }
     }
 }

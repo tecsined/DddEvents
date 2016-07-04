@@ -3,3 +3,14 @@
 ################################################################################
 
 *.suo
+/Ddd.Events/Ddd.Events/bin/Debug
+/Ddd.Events/Ddd.Events.Example/bin/Debug
+/Ddd.Events/Ddd.Events.Tets/bin/Debug
+/Ddd.Events/Ddd.Events.Example/obj/Debug
+/Ddd.Events/Ddd.Events/obj/Debug/Ddd.Events.dll
+/Ddd.Events/Ddd.Events/obj/Debug/Ddd.Events.pdb
+/Ddd.Events/Ddd.Events/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/Ddd.Events/Ddd.Events.Tets/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+*.pdb
+*.dll
+*.cache
