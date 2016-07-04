@@ -8,6 +8,16 @@ namespace Ddd.Events.Tets
     [TestClass]
     public class EventTest
     {
+        private SleepStartedEventHandler _sleepStartedEventHandler;
+        private WakeupStartedEventHandler _wakeupStartedEventHandler;
+
+        [TestInitialize]
+        public void Initialize()
+        {
+          _sleepStartedEventHandler = new SleepStartedEventHandler();
+          _wakeupStartedEventHandler = new WakeupStartedEventHandler();
+        }
+
         [TestMethod]
         public void ShowFlowsOfInitilializeFireAndCaptureDomainEvents()
         {
@@ -26,24 +36,25 @@ namespace Ddd.Events.Tets
                 var listener = new EventListener();
 
             //Act
+                //When the process of the events are completed the 
+                //listeners will recieved the domain on the specific events
+                //and dispacht events
+                //This is simulating that process of firing and listeing events.
 
                 bebe.GoToSleep(DateTime.Now);
-                mama.GoToSleep(DateTime.Now.AddMinutes(20));
-                bebe.Wakeup(DateTime.Now.AddHours(2));
-                mama.Wakeup(DateTime.Now.AddHours(2));
-
-            //The process of the Event is complete and the 
-            //listener recieved the domain on the specific event  
                 listener.OnSleepStart(bebe);
+
+                mama.GoToSleep(DateTime.Now.AddMinutes(20));
                 listener.OnSleepStart(mama);
+
+                bebe.Wakeup(DateTime.Now.AddHours(2));
                 listener.OnWakeUpStart(bebe);
+                mama.Wakeup(DateTime.Now.AddHours(2));
                 listener.OnWakeUpStart(mama);
-
+            
             //Assert 
-
-            //Events where processed. 
             Assert.IsFalse(bebe.DomainEvents.Any());
-               Assert.IsFalse(mama.DomainEvents.Any());
+            Assert.IsFalse(mama.DomainEvents.Any());
         }
     }
 }
