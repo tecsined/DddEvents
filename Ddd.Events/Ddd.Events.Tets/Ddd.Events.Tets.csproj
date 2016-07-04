@@ -51,6 +51,17 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="EventTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ddd.Events.Example\Ddd.Events.Example.csproj">
+      <Project>{e7e774b0-5c51-464c-8363-041333995c3e}</Project>
+      <Name>Ddd.Events.Example</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ddd.Events\Ddd.Events.csproj">
+      <Project>{c4bbab9b-b7e5-4da8-935a-db0e341769b3}</Project>
+      <Name>Ddd.Events</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

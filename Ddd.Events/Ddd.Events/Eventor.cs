@@ -9,7 +9,7 @@ namespace Ddd.Events
 
         public virtual IReadOnlyList<IDomainEvents> DomainEvents => _domainEvents;
 
-        protected virtual void DomainEvent(IDomainEvents domainEvent)
+        protected virtual void AddDomainEvent(IDomainEvents domainEvent)
         {
             Debug.Assert(_domainEvents != null, "_domainEvents != null");
             _domainEvents.Add(domainEvent);
