@@ -17,3 +17,7 @@
 *.user
 /Ddd.Events/Ddd.Events.Tets/obj/Debug
 /Ddd.Events/Ddd.Events/obj/Debug
+/Ddd.Events/Ddd.Events/obj/Release
+/Ddd.Events/Ddd.Events.Example/obj/Release
+/Ddd.Events/Ddd.Events.Tets/bin/Release
+/Ddd.Events/Ddd.Events.Tets/obj/Release
