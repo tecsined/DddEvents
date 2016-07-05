@@ -7,17 +7,29 @@ namespace Ddd.Events
 {
     public class DomainEvents
     {
-        private static List<Type> _handlers;
+        private static List<Type> _handlers = new List<Type>();
 
         public static void Init()
         {
-            _handlers = Assembly.GetExecutingAssembly()
+           var _handlersFromExecutingAssembly = Assembly.GetExecutingAssembly()
                 .GetTypes()
                 .Where(
                     t =>
                         t.GetInterfaces()
                             .Any(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof (IHandler<>)))
                 .ToList();
+
+            var _handlersFromCallingAssembly = Assembly.GetCallingAssembly()
+              .GetTypes()
+              .Where(
+                  t =>
+                      t.GetInterfaces()
+                          .Any(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IHandler<>)))
+              .ToList();
+
+            _handlers.AddRange(_handlersFromExecutingAssembly);
+
+            _handlers.AddRange(_handlersFromCallingAssembly);
         }
 
         public static void Dispatch(IDomainEvents domainEvents)
@@ -36,7 +48,7 @@ namespace Ddd.Events
                 if (!canHandleEvent) continue;
 
                 dynamic handler = Activator.CreateInstance(handlerType);
-                handler.Handler((dynamic) domainEvents);
+                handler.Handle((dynamic) domainEvents);
             }
         }
     }

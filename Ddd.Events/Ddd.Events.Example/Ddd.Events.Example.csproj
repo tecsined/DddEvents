@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="Baby.cs" />
     <Compile Include="EventListener.cs" />
+    <Compile Include="Initer.cs" />
     <Compile Include="Mother.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

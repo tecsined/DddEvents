@@ -8,28 +8,26 @@ namespace Ddd.Events.Tets
     [TestClass]
     public class EventTest
     {
-        private SleepStartedEventHandler _sleepStartedEventHandler;
-        private WakeupStartedEventHandler _wakeupStartedEventHandler;
+        
 
         [TestInitialize]
         public void Initialize()
         {
-          _sleepStartedEventHandler = new SleepStartedEventHandler();
-          _wakeupStartedEventHandler = new WakeupStartedEventHandler();
+         
         }
 
         [TestMethod]
         public void ShowFlowsOfInitilializeFireAndCaptureDomainEvents()
         {
             //Arrange
-            
-                //Register event handlers. This should add 
-                //on the entry point of the application
-                DomainEvents.Init();
+
+            //Register event handlers. This should add 
+            //on the entry point of the application
+            var initer = new Initer();
 
 
-                // Created domain objects. These are registering event for wake up and go to sleep.
-                var mama = new Mother("Jessica");
+            // Created domain objects. These are registering event for wake up and go to sleep.
+            var mama = new Mother("Jessica");
                 var bebe = new Baby("Benjamin");
 
                 // Create fake listener. This is going to be direct related to the event process.
